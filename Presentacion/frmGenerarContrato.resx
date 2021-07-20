@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtContrato.Text" xml:space="preserve">
+    <value>CONTRATO DE LOCACION
+
+En la ciudad de [LOCALIDAD], el día [DIA] del mes [MES] de [AÑO], entre ……………., MI Nº -----------, domiciliado en calle [CALLE] N° [NUMERO] de la localidad de [LOCALIDAD], en adelante “EL LOCADOR”, por una parte y por la otra la Sra. ------------- MI N° , argentina, divorciada y el Sr.-------------- M.I. N°5,argentino soltero ambos hábiles para contratar, con domicilio en calle Necochea Nº 350, en adelante denominados “EL LOCATARIO”, celebran el presente CONTRATO DE LOCACION, el que se regirá por las siguientes cláusulas y condiciones:
+PRIMERA: OBJETO. EL LOCADOR da en locación a EL LOCATARIO y esta acepta en tal concepto, el inmueble ubicado en calle Necochea Nº 350 de esta ciudad de Paraná, compuesto de casa en una planta, dos dormitorios, cocina-comedor con mesada y bajo mesada, y calefón, lavadero, baño, patio con un deposito en el fondo y un tubo de gas de 45 Kg y una pequeña churrasquera, todo en perfecto estado de conservación, lo cual deberá ser restituido en iguales condiciones, una vez concluido el presente contrato.------- 
+SEGUNDA: PLAZO. La presente locación se celebra por el término de DOS (2) AÑOS, a contar del día 1° de Septiembre de 2012, venciendo indefectiblemente y en consecuencia el día  1° de Septiembre  de 2014.----------------------------
+TERCERA: PRECIO DE LA LOCACION. Se fija en la suma total y global de PESOS VEINTISIETE MIL SEISCIENTOS ($27.600,00)que serán abonados por EL LOCATARIO por mes adelantado, de la siguiente manera; los primeros doce meses abonará la suma  fija de PESOS DOCE MIL ($12.000,00) en doce cuotas mensuales iguales y consecutivas de PESOS UN MIL ($1.000,00) venciendo la primera de ellas en fecha 10/09/2012 y la suma de PESOS QUINCE MIL SEICIENTOS ($15.600,00), para segundo año de locación, que será abonada en doce cuotas iguales mensuales y consecutivas de PESOS UN MIL TRESCIENTOS ($1.300,00), venciendo la primera de ellas en fecha 10/09/2013.- ----------------------------
+CUARTA: FORMA Y LUGAR DE PAGO. El pago del alquiler deberá ser efectuado del uno (01) al diez (10) de cada mes, en dinero efectivo y en el domicilio fijado a tales efectos sito en calle Necochea N° 350 de esta ciudad, en donde se entregara el respectivo recibo de pago.-------------------
+QUINTA: DESTINO. El inmueble objeto del presente, será destinado exclusivamente a VIVIENDA FAMILIAR de El LOCATARIO, estándole totalmente prohibido cambiar el destino, sin el consentimiento expreso y por escrito de EL LOCADOR. Asimismo deberán respetarse las normas de vecindad que imponen las circunstancias de la vivienda.- -----------
+SEXTA: CESION O SUBLOCACION. Queda totalmente prohibido transferir y/o ceder total o parcialmente este contrato, o sublocar o permutar todo o parte del inmueble, ya sea en forma gratuita u onerosa, sin el consentimiento expreso de EL LOCADOR, renunciando expresamente EL LOCATARIO a los beneficios de los arts. 1579 y 1598 del C. Civil.----------
+SEPTIMA: MANTENIMIENTO Y MEJORAS. EL LOCATARIO se obliga a mantener el inmueble en el buen estado general de uso e higiene, obligándose a mantenerlo en igual forma por todo el tiempo del contrato, siendo a su cargo los gastos necesarios para ello.- No podrán introducirse modificaciones y/o realizar mejoras en el inmueble, sin que sean aprobadas previamente por EL LOCADOR; las que se realicen quedarán en beneficio exclusivo del inmueble una vez finalizada la relación locativa, sin derecho a retribución y/o compensación alguna a favor de EL LOCATARIO.------------------------------------------------
+OCTAVA: INCUMPLIMIENTO. La falta de pago en el lugar, fecha y forma convenidos hará que EL LOCATARIO quede constituido en mora automática, sin necesidad de interpelación judicial o extrajudicial alguna, adeudando desde ese momento el alquiler respectivo con la suma de PESOS DIEZ ($10) por cada día de mora en la cancelación de la deuda y en carácter multa, el que será abonado conjuntamente con el canon adeudado.--------------------------------------------
+NOVENA: RESOLUCION Y DESALOJO. La falta de cumplimiento por EL LOCATARIO a todas y cada una de las obligaciones asumidas en el presente, especialmente el no pago del alquiler en las fechas previstas para ello, producirá la mora automática y dará derecho a EL LOCADOR para demandar la resolución del presente y el inmediato desalojo del inmueble.--------------------------------------------------
+DECIMA: ENTREGA DEL INMUEBLE. Al vencimiento del plazo del presente EL LOCATARIO deberá entregar a EL LOCADOR o a quién éste autorice debidamente, el inmueble, y sus correspondientes llaves, libres de ocupantes y ocupación, en las mismas condiciones recibidas.- Caso contrario no se dará por recibidas las llaves ni el inmueble, quedando facultado EL LOCADOR a exigir la posesión judicial del mismo, siendo a cargo de EL LOCATARIO los gastos, daños y perjuicios que se derivaren por entregar las llaves a terceros no autorizados.- Son igualmente a cargo de EL LOCATARIO la reposición de los objetos y/o elementos que se hubieren deteriorado o rotos por su culpa y/o negligencia o como consecuencia del mal uso; todo ello sujeto a la conformidad que por escrito deberá prestar EL LOCADOR.-----
+DECIMA PRIMERA: MORA EN LA DEVOLUCIÓN DEL INMUEBLE. Si finalizada la locación por vencimiento del plazo originariamente estipulado, EL LOCATARIO no restituye el inmueble locado, quedara esta constituida en MORA AUTOMÁTICA sin necesidad de interpelación judicial o extrajudicial alguna, debiendo abonar a EL LOCADOR, en concepto de indemnización por ocupación ilegítima, una suma equivalente a tres veces el alquiler pactado, hasta tanto EL LOCADOR obtenga la efectiva restitución del bien a su entera satisfacción, sin perjuicio de las que correspondan por aplicación de lo dispuesto en el art. 1609 del Código Civil.- La permanencia de EL LOCATARIO o personas que estos hubieren autorizado a estar en el inmueble una vez vencido el plazo del contrato, no se considerará tácita reconducción y se podrá exigir la entrega del inmueble en cualquier momento. Asimismo las parte acuerdan una Multa, a favor de EL LOCADOR, equivalente a PESOS CIEN ($100,00) por cada día de mora en la devolución del inmueble. La permanencia de EL LOCATARIO o personas que estos hubieren autorizado a estar en el inmueble una vez vencido el plazo del contrato, no se considerará tácita reconducción y se podrá exigir la entrega del inmueble en cualquier momento -
+DECIMA SEGUNDA: INSPECCION. EL LOCADOR se reserva el derecho de inspeccionar el inmueble, por sí o por terceros debidamente autorizados, toda vez que lo estimen conveniente y sin previo aviso a EL LOCATARIO.------------
+DECIMA TERCERA: GARANTIA. Se ofrece como garantía la Srta. ACUÑA SANDRA CYNTHIA M.I N° 22.082.313 con domicilio en calle               N°      y el Sr.  M.I N° con domicilio en calle Patricios Argentina N° 947, de esta ciudad de Paraná, en adelante denominadas “GARANTES”, se constituyen en fiadores solidarios, liso, llano y principal pagador, renunciando en este acto al beneficio de excusión y división, aceptando ser deudores directos de las obligaciones que asume EL LOCATARIO en el presente contrato, y sus responsabilidades subsistirán hasta que EL LOCADOR se de por conforme y reciba el inmueble objeto del presente en las condiciones establecidas, y de por pagadas todas las sumas que pudieran adeudarse por cualquier concepto en relación a la presente relación locativa.----------------------------------------
+DECIMA CUARTA: CONSUMOS e IMPUESTOS. Es a cargo de EL  LOCATARIO, los montos provenientes de los consumos de energía eléctrica, y todo otro servicio que habilite en el inmueble objeto de la presente locación, siendo por cuenta de EL LOCADDOR el pago de todo impuestos y/o tasas que graven  el inmueble antes mencionado.----------------------
+DECIMA QUINTA: CAMBIO DE DOMICILIO. En caso de que la parte locataria y/o co-deudora mudaren el domicilio que respectivamente consta para cada una de ellas en este contrato, deberán obligatoriamente notificar fehacientemente de ello a EL LOCADOR y dentro de las cuarenta y ocho (48) horas de producido el cambio, comunicando el nuevo domicilio, en su defecto subsistirán los consignados en el presente.----------------------------
+DECIMO SEXTA: EXIMICION DE RESPONSABILIDAD. EL LOCADOR quedan eximidos de toda responsabilidad por daños que sufriera LOS LOCATARIOS y/o los accidentales ocupantes del inmueble y/o los efectos allí depositados.-----------------
+DECIMA SEPTIMA: JURISDICCION. Para todos los efectos resultantes del presente contrato, las partes fijan domicilio especial en los antes enunciados para cada una de ellas, lugar en el que se tendrán por válidas las notificaciones que se efectúen, sometiéndose a la jurisdicción de los Tribunales Ordinarios de esta Capital, con renuncia expresa a cualquier otra que pudiere corresponderles.- -----------------------------------------
+DECIMA OCTAVA: CLAUSUSLA DE REVISION DEL CONTRATO: las partes acuerdan que al año de la firma del presente contrato las partes podrán renegociar el canon locativo en virtud de los índices de aumento en el mercado inmobiliario, no llegando a un acuerdo común acerca del mismo el locador podrá rescindir el presente contrato sin derecho a indemnización a favor del lactario.--------------
+LEIDA y RATIFICADA, se firman dos (2) ejemplares de un mismo tenor y aún solo efecto, en el lugar y fecha consignados al inicio.- 
+</value>
+  </data>
+</root>
