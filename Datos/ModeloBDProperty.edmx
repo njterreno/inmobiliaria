@@ -1,0 +1,1093 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BDPropertyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="BDPropertyModelStoreContainer">
+          <EntitySet Name="Alquiler" EntityType="BDPropertyModel.Store.Alquiler" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Barrio" EntityType="BDPropertyModel.Store.Barrio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CuotaMensual" EntityType="BDPropertyModel.Store.CuotaMensual" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Edificio" EntityType="BDPropertyModel.Store.Edificio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Estado" EntityType="BDPropertyModel.Store.Estado" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Garante" EntityType="BDPropertyModel.Store.Garante" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Inquilino" EntityType="BDPropertyModel.Store.Inquilino" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Localidad" EntityType="BDPropertyModel.Store.Localidad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Propiedad" EntityType="BDPropertyModel.Store.Propiedad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Propietario" EntityType="BDPropertyModel.Store.Propietario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Provincia" EntityType="BDPropertyModel.Store.Provincia" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="BDPropertyModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tipo" EntityType="BDPropertyModel.Store.Tipo" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Alquiler_Garante" Association="BDPropertyModel.Store.FK_Alquiler_Garante">
+            <End Role="Garante" EntitySet="Garante" />
+            <End Role="Alquiler" EntitySet="Alquiler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alquiler_Garante1" Association="BDPropertyModel.Store.FK_Alquiler_Garante1">
+            <End Role="Garante" EntitySet="Garante" />
+            <End Role="Alquiler" EntitySet="Alquiler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alquiler_Inquilino" Association="BDPropertyModel.Store.FK_Alquiler_Inquilino">
+            <End Role="Inquilino" EntitySet="Inquilino" />
+            <End Role="Alquiler" EntitySet="Alquiler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alquiler_Propiedad" Association="BDPropertyModel.Store.FK_Alquiler_Propiedad">
+            <End Role="Propiedad" EntitySet="Propiedad" />
+            <End Role="Alquiler" EntitySet="Alquiler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alquiler_Propiedad1" Association="BDPropertyModel.Store.FK_Alquiler_Propiedad1">
+            <End Role="Propiedad" EntitySet="Propiedad" />
+            <End Role="Alquiler" EntitySet="Alquiler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Barrio_Localidad" Association="BDPropertyModel.Store.FK_Barrio_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="Barrio" EntitySet="Barrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CuotaMensual_Alquiler" Association="BDPropertyModel.Store.FK_CuotaMensual_Alquiler">
+            <End Role="Alquiler" EntitySet="Alquiler" />
+            <End Role="CuotaMensual" EntitySet="CuotaMensual" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Garante_Localidad" Association="BDPropertyModel.Store.FK_Garante_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="Garante" EntitySet="Garante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inquilino_Localidad" Association="BDPropertyModel.Store.FK_Inquilino_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="Inquilino" EntitySet="Inquilino" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Localidad_Provincia" Association="BDPropertyModel.Store.FK_Localidad_Provincia">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Localidad" EntitySet="Localidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propiedad_Barrio" Association="BDPropertyModel.Store.FK_Propiedad_Barrio">
+            <End Role="Barrio" EntitySet="Barrio" />
+            <End Role="Propiedad" EntitySet="Propiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propiedad_Edificio" Association="BDPropertyModel.Store.FK_Propiedad_Edificio">
+            <End Role="Edificio" EntitySet="Edificio" />
+            <End Role="Propiedad" EntitySet="Propiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propiedad_Estado" Association="BDPropertyModel.Store.FK_Propiedad_Estado">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="Propiedad" EntitySet="Propiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propiedad_Propietario" Association="BDPropertyModel.Store.FK_Propiedad_Propietario">
+            <End Role="Propietario" EntitySet="Propietario" />
+            <End Role="Propiedad" EntitySet="Propiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propiedad_Tipo" Association="BDPropertyModel.Store.FK_Propiedad_Tipo">
+            <End Role="Tipo" EntitySet="Tipo" />
+            <End Role="Propiedad" EntitySet="Propiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propietario_Localidad" Association="BDPropertyModel.Store.FK_Propietario_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="Propietario" EntitySet="Propietario" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Alquiler">
+          <Key>
+            <PropertyRef Name="IDAlquiler" />
+          </Key>
+          <Property Name="IDAlquiler" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDPropiedad" Type="bigint" Nullable="false" />
+          <Property Name="IDInquilino" Type="bigint" Nullable="false" />
+          <Property Name="IDGarante1" Type="bigint" Nullable="false" />
+          <Property Name="IDGarante2" Type="bigint" Nullable="false" />
+          <Property Name="Fecha" Type="date" Nullable="false" />
+          <Property Name="FechaInicioContrato" Type="date" Nullable="false" />
+          <Property Name="FechaFinContrato" Type="date" Nullable="false" />
+          <Property Name="MontoAlquiler" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Barrio">
+          <Key>
+            <PropertyRef Name="IDBarrio" />
+          </Key>
+          <Property Name="IDBarrio" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDLocalidad" Type="bigint" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CuotaMensual">
+          <Key>
+            <PropertyRef Name="IDCuotaMensual" />
+          </Key>
+          <Property Name="IDCuotaMensual" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDAlquiler" Type="bigint" Nullable="false" />
+          <Property Name="Numero" Type="int" Nullable="false" />
+          <Property Name="Periodo" Type="date" />
+          <Property Name="Monto" Type="int" />
+          <Property Name="Pago" Type="nvarchar" MaxLength="2" />
+          <Property Name="FechaPago" Type="nvarchar" MaxLength="50" />
+          <Property Name="MontoRecargo" Type="int" />
+          <Property Name="MontoTotal" Type="int" />
+        </EntityType>
+        <EntityType Name="Edificio">
+          <Key>
+            <PropertyRef Name="IDEdificio" />
+          </Key>
+          <Property Name="IDEdificio" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDLocalidad" Type="bigint" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+          <Property Name="IDBarrio" Type="bigint" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="50" />
+          <Property Name="MontoExpensas" Type="int" />
+        </EntityType>
+        <EntityType Name="Estado">
+          <Key>
+            <PropertyRef Name="IDEstado" />
+          </Key>
+          <Property Name="IDEstado" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Garante">
+          <Key>
+            <PropertyRef Name="IDGarante" />
+          </Key>
+          <Property Name="IDGarante" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDLocalidad" Type="bigint" Nullable="false" />
+          <Property Name="NombreYApellido" Type="nvarchar" MaxLength="50" />
+          <Property Name="DNI" Type="varchar" MaxLength="8" />
+          <Property Name="FechaNac" Type="date" />
+          <Property Name="Telefono" Type="bigint" />
+          <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="50" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="50" />
+          <Property Name="MontoSueldo" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Inquilino">
+          <Key>
+            <PropertyRef Name="IDInquilino" />
+          </Key>
+          <Property Name="IDInquilino" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDLocalidad" Type="bigint" Nullable="false" />
+          <Property Name="NombreYApellido" Type="varchar" MaxLength="50" />
+          <Property Name="DNI" Type="varchar" MaxLength="8" />
+          <Property Name="FechaNac" Type="date" />
+          <Property Name="Telefono" Type="bigint" />
+          <Property Name="CorreoElectronico" Type="varchar" MaxLength="50" />
+          <Property Name="Direccion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Localidad">
+          <Key>
+            <PropertyRef Name="IDLocalidad" />
+          </Key>
+          <Property Name="IDLocalidad" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDProvincia" Type="bigint" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodigoPostal" Type="int" />
+        </EntityType>
+        <EntityType Name="Propiedad">
+          <Key>
+            <PropertyRef Name="IDPropiedad" />
+          </Key>
+          <Property Name="IDPropiedad" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDPropietario" Type="bigint" Nullable="false" />
+          <Property Name="IDBarrio" Type="bigint" />
+          <Property Name="IDTipo" Type="bigint" Nullable="false" />
+          <Property Name="IDEstado" Type="bigint" Nullable="false" />
+          <Property Name="IDEdificio" Type="bigint" />
+          <Property Name="IDLocalidad" Type="bigint" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PisoNro" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tamaño" Type="nvarchar" MaxLength="50" />
+          <Property Name="CantHabitac" Type="nvarchar" MaxLength="50" />
+          <Property Name="CantBaños" Type="nvarchar" MaxLength="50" />
+          <Property Name="Patio" Type="varchar" MaxLength="2" />
+          <Property Name="Cochera" Type="varchar" MaxLength="2" />
+          <Property Name="Garage" Type="varchar" MaxLength="2" />
+          <Property Name="Cocina" Type="varchar" MaxLength="2" />
+          <Property Name="Comedor" Type="varchar" MaxLength="2" />
+          <Property Name="VistaCalle" Type="varchar" MaxLength="2" />
+          <Property Name="GasNatural" Type="varchar" MaxLength="2" />
+          <Property Name="Pileta" Type="varchar" MaxLength="2" />
+          <Property Name="Asador" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="Propietario">
+          <Key>
+            <PropertyRef Name="IDPropietario" />
+          </Key>
+          <Property Name="IDPropietario" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDLocalidad" Type="bigint" Nullable="false" />
+          <Property Name="NombreYApellido" Type="varchar" MaxLength="50" />
+          <Property Name="DNI" Type="varchar" MaxLength="8" />
+          <Property Name="FechaNac" Type="date" />
+          <Property Name="Telefono" Type="bigint" />
+          <Property Name="CorreoElectronico" Type="nvarchar" MaxLength="50" />
+          <Property Name="Direccion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="IDProvincia" />
+          </Key>
+          <Property Name="IDProvincia" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tipo">
+          <Key>
+            <PropertyRef Name="IDTipo" />
+          </Key>
+          <Property Name="IDTipo" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Alquiler_Garante">
+          <End Role="Garante" Type="BDPropertyModel.Store.Garante" Multiplicity="1" />
+          <End Role="Alquiler" Type="BDPropertyModel.Store.Alquiler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Garante">
+              <PropertyRef Name="IDGarante" />
+            </Principal>
+            <Dependent Role="Alquiler">
+              <PropertyRef Name="IDGarante1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alquiler_Garante1">
+          <End Role="Garante" Type="BDPropertyModel.Store.Garante" Multiplicity="1" />
+          <End Role="Alquiler" Type="BDPropertyModel.Store.Alquiler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Garante">
+              <PropertyRef Name="IDGarante" />
+            </Principal>
+            <Dependent Role="Alquiler">
+              <PropertyRef Name="IDGarante2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alquiler_Inquilino">
+          <End Role="Inquilino" Type="BDPropertyModel.Store.Inquilino" Multiplicity="1" />
+          <End Role="Alquiler" Type="BDPropertyModel.Store.Alquiler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inquilino">
+              <PropertyRef Name="IDInquilino" />
+            </Principal>
+            <Dependent Role="Alquiler">
+              <PropertyRef Name="IDInquilino" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alquiler_Propiedad">
+          <End Role="Propiedad" Type="BDPropertyModel.Store.Propiedad" Multiplicity="1" />
+          <End Role="Alquiler" Type="BDPropertyModel.Store.Alquiler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propiedad">
+              <PropertyRef Name="IDPropiedad" />
+            </Principal>
+            <Dependent Role="Alquiler">
+              <PropertyRef Name="IDPropiedad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alquiler_Propiedad1">
+          <End Role="Propiedad" Type="BDPropertyModel.Store.Propiedad" Multiplicity="1" />
+          <End Role="Alquiler" Type="BDPropertyModel.Store.Alquiler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propiedad">
+              <PropertyRef Name="IDPropiedad" />
+            </Principal>
+            <Dependent Role="Alquiler">
+              <PropertyRef Name="IDPropiedad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Barrio_Localidad">
+          <End Role="Localidad" Type="BDPropertyModel.Store.Localidad" Multiplicity="1" />
+          <End Role="Barrio" Type="BDPropertyModel.Store.Barrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IDLocalidad" />
+            </Principal>
+            <Dependent Role="Barrio">
+              <PropertyRef Name="IDLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CuotaMensual_Alquiler">
+          <End Role="Alquiler" Type="BDPropertyModel.Store.Alquiler" Multiplicity="1" />
+          <End Role="CuotaMensual" Type="BDPropertyModel.Store.CuotaMensual" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alquiler">
+              <PropertyRef Name="IDAlquiler" />
+            </Principal>
+            <Dependent Role="CuotaMensual">
+              <PropertyRef Name="IDAlquiler" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Garante_Localidad">
+          <End Role="Localidad" Type="BDPropertyModel.Store.Localidad" Multiplicity="1" />
+          <End Role="Garante" Type="BDPropertyModel.Store.Garante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IDLocalidad" />
+            </Principal>
+            <Dependent Role="Garante">
+              <PropertyRef Name="IDLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inquilino_Localidad">
+          <End Role="Localidad" Type="BDPropertyModel.Store.Localidad" Multiplicity="1" />
+          <End Role="Inquilino" Type="BDPropertyModel.Store.Inquilino" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IDLocalidad" />
+            </Principal>
+            <Dependent Role="Inquilino">
+              <PropertyRef Name="IDLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Localidad_Provincia">
+          <End Role="Provincia" Type="BDPropertyModel.Store.Provincia" Multiplicity="1" />
+          <End Role="Localidad" Type="BDPropertyModel.Store.Localidad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="IDProvincia" />
+            </Principal>
+            <Dependent Role="Localidad">
+              <PropertyRef Name="IDProvincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propiedad_Barrio">
+          <End Role="Barrio" Type="BDPropertyModel.Store.Barrio" Multiplicity="0..1" />
+          <End Role="Propiedad" Type="BDPropertyModel.Store.Propiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Barrio">
+              <PropertyRef Name="IDBarrio" />
+            </Principal>
+            <Dependent Role="Propiedad">
+              <PropertyRef Name="IDBarrio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propiedad_Edificio">
+          <End Role="Edificio" Type="BDPropertyModel.Store.Edificio" Multiplicity="0..1" />
+          <End Role="Propiedad" Type="BDPropertyModel.Store.Propiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Edificio">
+              <PropertyRef Name="IDEdificio" />
+            </Principal>
+            <Dependent Role="Propiedad">
+              <PropertyRef Name="IDEdificio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propiedad_Estado">
+          <End Role="Estado" Type="BDPropertyModel.Store.Estado" Multiplicity="1" />
+          <End Role="Propiedad" Type="BDPropertyModel.Store.Propiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado">
+              <PropertyRef Name="IDEstado" />
+            </Principal>
+            <Dependent Role="Propiedad">
+              <PropertyRef Name="IDEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propiedad_Propietario">
+          <End Role="Propietario" Type="BDPropertyModel.Store.Propietario" Multiplicity="1" />
+          <End Role="Propiedad" Type="BDPropertyModel.Store.Propiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propietario">
+              <PropertyRef Name="IDPropietario" />
+            </Principal>
+            <Dependent Role="Propiedad">
+              <PropertyRef Name="IDPropietario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propiedad_Tipo">
+          <End Role="Tipo" Type="BDPropertyModel.Store.Tipo" Multiplicity="1" />
+          <End Role="Propiedad" Type="BDPropertyModel.Store.Propiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo">
+              <PropertyRef Name="IDTipo" />
+            </Principal>
+            <Dependent Role="Propiedad">
+              <PropertyRef Name="IDTipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propietario_Localidad">
+          <End Role="Localidad" Type="BDPropertyModel.Store.Localidad" Multiplicity="1" />
+          <End Role="Propietario" Type="BDPropertyModel.Store.Propietario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IDLocalidad" />
+            </Principal>
+            <Dependent Role="Propietario">
+              <PropertyRef Name="IDLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BDPropertyModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BDPropertyEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Alquiler" EntityType="BDPropertyModel.Alquiler" />
+          <EntitySet Name="CuotaMensual" EntityType="BDPropertyModel.CuotaMensual" />
+          <EntitySet Name="Estado" EntityType="BDPropertyModel.Estado" />
+          <EntitySet Name="Garante" EntityType="BDPropertyModel.Garante" />
+          <EntitySet Name="Inquilino" EntityType="BDPropertyModel.Inquilino" />
+          <EntitySet Name="Localidad" EntityType="BDPropertyModel.Localidad" />
+          <EntitySet Name="Propietario" EntityType="BDPropertyModel.Propietario" />
+          <EntitySet Name="Provincia" EntityType="BDPropertyModel.Provincia" />
+          <EntitySet Name="Tipo" EntityType="BDPropertyModel.Tipo" />
+          <AssociationSet Name="FK_CuotaMensual_Alquiler" Association="BDPropertyModel.FK_CuotaMensual_Alquiler">
+            <End Role="Alquiler" EntitySet="Alquiler" />
+            <End Role="CuotaMensual" EntitySet="CuotaMensual" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inquilino_Localidad" Association="BDPropertyModel.FK_Inquilino_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="Inquilino" EntitySet="Inquilino" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Localidad_Provincia" Association="BDPropertyModel.FK_Localidad_Provincia">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Localidad" EntitySet="Localidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Garante_Localidad" Association="BDPropertyModel.FK_Garante_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="Garante" EntitySet="Garante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propietario_Localidad" Association="BDPropertyModel.FK_Propietario_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="Propietario" EntitySet="Propietario" />
+          </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="BDPropertyModel.sysdiagrams" />
+          <EntitySet Name="Edificio" EntityType="BDPropertyModel.Edificio" />
+          <EntitySet Name="Barrio" EntityType="BDPropertyModel.Barrio" />
+          <AssociationSet Name="FK_Barrio_Localidad" Association="BDPropertyModel.FK_Barrio_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="Barrio" EntitySet="Barrio" />
+          </AssociationSet>
+          <EntitySet Name="Propiedad" EntityType="BDPropertyModel.Propiedad" />
+          <AssociationSet Name="FK_Alquiler_Propiedad" Association="BDPropertyModel.FK_Alquiler_Propiedad">
+            <End Role="Propiedad" EntitySet="Propiedad" />
+            <End Role="Alquiler" EntitySet="Alquiler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alquiler_Propiedad1" Association="BDPropertyModel.FK_Alquiler_Propiedad1">
+            <End Role="Propiedad" EntitySet="Propiedad" />
+            <End Role="Alquiler" EntitySet="Alquiler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propiedad_Barrio" Association="BDPropertyModel.FK_Propiedad_Barrio">
+            <End Role="Barrio" EntitySet="Barrio" />
+            <End Role="Propiedad" EntitySet="Propiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propiedad_Edificio" Association="BDPropertyModel.FK_Propiedad_Edificio">
+            <End Role="Edificio" EntitySet="Edificio" />
+            <End Role="Propiedad" EntitySet="Propiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propiedad_Estado" Association="BDPropertyModel.FK_Propiedad_Estado">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="Propiedad" EntitySet="Propiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propiedad_Propietario" Association="BDPropertyModel.FK_Propiedad_Propietario">
+            <End Role="Propietario" EntitySet="Propietario" />
+            <End Role="Propiedad" EntitySet="Propiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Propiedad_Tipo" Association="BDPropertyModel.FK_Propiedad_Tipo">
+            <End Role="Tipo" EntitySet="Tipo" />
+            <End Role="Propiedad" EntitySet="Propiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alquiler_Garante" Association="BDPropertyModel.FK_Alquiler_Garante">
+            <End Role="Garante" EntitySet="Garante" />
+            <End Role="Alquiler" EntitySet="Alquiler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alquiler_Garante1" Association="BDPropertyModel.FK_Alquiler_Garante1">
+            <End Role="Garante" EntitySet="Garante" />
+            <End Role="Alquiler" EntitySet="Alquiler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alquiler_Inquilino" Association="BDPropertyModel.FK_Alquiler_Inquilino">
+            <End Role="Inquilino" EntitySet="Inquilino" />
+            <End Role="Alquiler" EntitySet="Alquiler" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Alquiler">
+          <Key>
+            <PropertyRef Name="IDAlquiler" />
+          </Key>
+          <Property Name="IDAlquiler" Type="Int64" Nullable="false" />
+          <Property Name="IDPropiedad" Type="Int64" Nullable="false" />
+          <Property Name="IDInquilino" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="CuotaMensual" Relationship="BDPropertyModel.FK_CuotaMensual_Alquiler" FromRole="Alquiler" ToRole="CuotaMensual" />
+          <Property Type="Int32" Name="MontoAlquiler" Nullable="false" />
+          <Property Type="Int64" Name="IDGarante1" Nullable="false" />
+          <Property Type="Int64" Name="IDGarante2" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="FechaInicioContrato" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="FechaFinContrato" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Propiedad" Relationship="BDPropertyModel.FK_Alquiler_Propiedad" FromRole="Alquiler" ToRole="Propiedad" />
+          <NavigationProperty Name="Garante" Relationship="BDPropertyModel.FK_Alquiler_Garante" FromRole="Alquiler" ToRole="Garante" />
+          <NavigationProperty Name="Garante1" Relationship="BDPropertyModel.FK_Alquiler_Garante1" FromRole="Alquiler" ToRole="Garante" />
+          <NavigationProperty Name="Inquilino" Relationship="BDPropertyModel.FK_Alquiler_Inquilino" FromRole="Alquiler" ToRole="Inquilino" />
+        </EntityType>
+        <EntityType Name="CuotaMensual">
+          <Key>
+            <PropertyRef Name="IDCuotaMensual" />
+          </Key>
+          <Property Name="IDCuotaMensual" Type="Int64" Nullable="false" />
+          <Property Name="IDAlquiler" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Int32" />
+          <NavigationProperty Name="Alquiler" Relationship="BDPropertyModel.FK_CuotaMensual_Alquiler" FromRole="CuotaMensual" ToRole="Alquiler" />
+          <Property Type="DateTime" Name="Periodo" Precision="0" />
+          <Property Type="String" Name="Pago" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FechaPago" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="MontoRecargo" />
+          <Property Type="Int32" Name="MontoTotal" />
+          <Property Type="Int32" Name="Numero" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Estado">
+          <Key>
+            <PropertyRef Name="IDEstado" />
+          </Key>
+          <Property Name="IDEstado" Type="Int64" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Propiedad" Relationship="BDPropertyModel.FK_Propiedad_Estado" FromRole="Estado" ToRole="Propiedad" />
+        </EntityType>
+        <EntityType Name="Garante">
+          <Key>
+            <PropertyRef Name="IDGarante" />
+          </Key>
+          <Property Name="IDGarante" Type="Int64" Nullable="false" />
+          <Property Name="NombreYApellido" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DNI" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="FechaNac" Type="DateTime" Precision="0" />
+          <Property Name="Telefono" Type="Int64" />
+          <Property Name="CorreoElectronico" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Direccion" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MontoSueldo" Type="Int64" />
+          <Property Type="Int64" Name="IDLocalidad" Nullable="false" />
+          <NavigationProperty Name="Localidad" Relationship="BDPropertyModel.FK_Garante_Localidad" FromRole="Garante" ToRole="Localidad" />
+          <NavigationProperty Name="Alquiler" Relationship="BDPropertyModel.FK_Alquiler_Garante" FromRole="Garante" ToRole="Alquiler" />
+          <NavigationProperty Name="Alquiler1" Relationship="BDPropertyModel.FK_Alquiler_Garante1" FromRole="Garante" ToRole="Alquiler" />
+        </EntityType>
+        <EntityType Name="Inquilino">
+          <Key>
+            <PropertyRef Name="IDInquilino" />
+          </Key>
+          <Property Name="IDInquilino" Type="Int64" Nullable="false" />
+          <Property Name="IDLocalidad" Type="Int64" Nullable="false" />
+          <Property Name="NombreYApellido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DNI" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="FechaNac" Type="DateTime" Precision="0" />
+          <Property Name="Telefono" Type="Int64" />
+          <Property Name="CorreoElectronico" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Direccion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Localidad" Relationship="BDPropertyModel.FK_Inquilino_Localidad" FromRole="Inquilino" ToRole="Localidad" />
+          <NavigationProperty Name="Alquiler" Relationship="BDPropertyModel.FK_Alquiler_Inquilino" FromRole="Inquilino" ToRole="Alquiler" />
+        </EntityType>
+        <EntityType Name="Localidad">
+          <Key>
+            <PropertyRef Name="IDLocalidad" />
+          </Key>
+          <Property Name="IDLocalidad" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="IDProvincia" Type="Int64" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CodigoPostal" Type="Int32" />
+          <NavigationProperty Name="Inquilino" Relationship="BDPropertyModel.FK_Inquilino_Localidad" FromRole="Localidad" ToRole="Inquilino" />
+          <NavigationProperty Name="Provincia" Relationship="BDPropertyModel.FK_Localidad_Provincia" FromRole="Localidad" ToRole="Provincia" />
+          <NavigationProperty Name="Garante" Relationship="BDPropertyModel.FK_Garante_Localidad" FromRole="Localidad" ToRole="Garante" />
+          <NavigationProperty Name="Propietario" Relationship="BDPropertyModel.FK_Propietario_Localidad" FromRole="Localidad" ToRole="Propietario" />
+          <NavigationProperty Name="Barrio" Relationship="BDPropertyModel.FK_Barrio_Localidad" FromRole="Localidad" ToRole="Barrio" />
+        </EntityType>
+        <EntityType Name="Propietario">
+          <Key>
+            <PropertyRef Name="IDPropietario" />
+          </Key>
+          <Property Name="IDPropietario" Type="Int64" Nullable="false" />
+          <Property Name="IDLocalidad" Type="Int64" Nullable="false" />
+          <Property Name="NombreYApellido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DNI" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="FechaNac" Type="DateTime" Precision="0" />
+          <Property Name="Telefono" Type="Int64" />
+          <Property Name="CorreoElectronico" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Direccion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Localidad" Relationship="BDPropertyModel.FK_Propietario_Localidad" FromRole="Propietario" ToRole="Localidad" />
+          <NavigationProperty Name="Propiedad" Relationship="BDPropertyModel.FK_Propiedad_Propietario" FromRole="Propietario" ToRole="Propiedad" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="IDProvincia" />
+          </Key>
+          <Property Name="IDProvincia" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Localidad" Relationship="BDPropertyModel.FK_Localidad_Provincia" FromRole="Provincia" ToRole="Localidad" />
+        </EntityType>
+        <EntityType Name="Tipo">
+          <Key>
+            <PropertyRef Name="IDTipo" />
+          </Key>
+          <Property Name="IDTipo" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Propiedad" Relationship="BDPropertyModel.FK_Propiedad_Tipo" FromRole="Tipo" ToRole="Propiedad" />
+        </EntityType>
+        <Association Name="FK_CuotaMensual_Alquiler">
+          <End Role="Alquiler" Type="BDPropertyModel.Alquiler" Multiplicity="1" />
+          <End Role="CuotaMensual" Type="BDPropertyModel.CuotaMensual" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alquiler">
+              <PropertyRef Name="IDAlquiler" />
+            </Principal>
+            <Dependent Role="CuotaMensual">
+              <PropertyRef Name="IDAlquiler" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inquilino_Localidad">
+          <End Role="Localidad" Type="BDPropertyModel.Localidad" Multiplicity="1" />
+          <End Role="Inquilino" Type="BDPropertyModel.Inquilino" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IDLocalidad" />
+            </Principal>
+            <Dependent Role="Inquilino">
+              <PropertyRef Name="IDLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Localidad_Provincia">
+          <End Role="Provincia" Type="BDPropertyModel.Provincia" Multiplicity="1" />
+          <End Role="Localidad" Type="BDPropertyModel.Localidad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="IDProvincia" />
+            </Principal>
+            <Dependent Role="Localidad">
+              <PropertyRef Name="IDProvincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Garante_Localidad">
+          <End Type="BDPropertyModel.Localidad" Role="Localidad" Multiplicity="1" />
+          <End Type="BDPropertyModel.Garante" Role="Garante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IDLocalidad" />
+            </Principal>
+            <Dependent Role="Garante">
+              <PropertyRef Name="IDLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propietario_Localidad">
+          <End Type="BDPropertyModel.Localidad" Role="Localidad" Multiplicity="1" />
+          <End Type="BDPropertyModel.Propietario" Role="Propietario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IDLocalidad" />
+            </Principal>
+            <Dependent Role="Propietario">
+              <PropertyRef Name="IDLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Edificio">
+          <Key>
+            <PropertyRef Name="IDEdificio" />
+          </Key>
+          <Property Type="Int64" Name="IDEdificio" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Direccion" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="MontoExpensas" />
+          <Property Type="Int64" Name="IDLocalidad" Nullable="false" />
+          <Property Type="Int64" Name="IDBarrio" />
+          <NavigationProperty Name="Propiedad" Relationship="BDPropertyModel.FK_Propiedad_Edificio" FromRole="Edificio" ToRole="Propiedad" />
+        </EntityType>
+        <EntityType Name="Barrio">
+          <Key>
+            <PropertyRef Name="IDBarrio" />
+          </Key>
+          <Property Type="Int64" Name="IDBarrio" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="IDLocalidad" Nullable="false" />
+          <Property Type="String" Name="Nombre" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Localidad" Relationship="BDPropertyModel.FK_Barrio_Localidad" FromRole="Barrio" ToRole="Localidad" />
+          <NavigationProperty Name="Propiedad" Relationship="BDPropertyModel.FK_Propiedad_Barrio" FromRole="Barrio" ToRole="Propiedad" />
+        </EntityType>
+        <Association Name="FK_Barrio_Localidad">
+          <End Type="BDPropertyModel.Localidad" Role="Localidad" Multiplicity="1" />
+          <End Type="BDPropertyModel.Barrio" Role="Barrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IDLocalidad" />
+            </Principal>
+            <Dependent Role="Barrio">
+              <PropertyRef Name="IDLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Propiedad">
+          <Key>
+            <PropertyRef Name="IDPropiedad" />
+          </Key>
+          <Property Type="Int64" Name="IDPropiedad" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="IDPropietario" Nullable="false" />
+          <Property Type="Int64" Name="IDBarrio" />
+          <Property Type="Int64" Name="IDTipo" Nullable="false" />
+          <Property Type="Int64" Name="IDEstado" Nullable="false" />
+          <Property Type="Int64" Name="IDEdificio" />
+          <Property Type="Int64" Name="IDLocalidad" Nullable="false" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tamaño" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CantBaños" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Patio" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Cochera" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Garage" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Cocina" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Comedor" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VistaCalle" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GasNatural" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pileta" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Asador" MaxLength="2" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Alquiler" Relationship="BDPropertyModel.FK_Alquiler_Propiedad" FromRole="Propiedad" ToRole="Alquiler" />
+          <NavigationProperty Name="Barrio" Relationship="BDPropertyModel.FK_Propiedad_Barrio" FromRole="Propiedad" ToRole="Barrio" />
+          <NavigationProperty Name="Edificio" Relationship="BDPropertyModel.FK_Propiedad_Edificio" FromRole="Propiedad" ToRole="Edificio" />
+          <NavigationProperty Name="Estado" Relationship="BDPropertyModel.FK_Propiedad_Estado" FromRole="Propiedad" ToRole="Estado" />
+          <NavigationProperty Name="Propietario" Relationship="BDPropertyModel.FK_Propiedad_Propietario" FromRole="Propiedad" ToRole="Propietario" />
+          <NavigationProperty Name="Tipo" Relationship="BDPropertyModel.FK_Propiedad_Tipo" FromRole="Propiedad" ToRole="Tipo" />
+          <Property Type="String" Name="PisoNro" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CantHabitac" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Alquiler_Propiedad">
+          <End Type="BDPropertyModel.Propiedad" Role="Propiedad" Multiplicity="1" />
+          <End Type="BDPropertyModel.Alquiler" Role="Alquiler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propiedad">
+              <PropertyRef Name="IDPropiedad" />
+            </Principal>
+            <Dependent Role="Alquiler">
+              <PropertyRef Name="IDPropiedad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alquiler_Propiedad1">
+          <End Type="BDPropertyModel.Propiedad" Role="Propiedad" Multiplicity="1" />
+          <End Type="BDPropertyModel.Alquiler" Role="Alquiler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propiedad">
+              <PropertyRef Name="IDPropiedad" />
+            </Principal>
+            <Dependent Role="Alquiler">
+              <PropertyRef Name="IDPropiedad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propiedad_Barrio">
+          <End Type="BDPropertyModel.Barrio" Role="Barrio" Multiplicity="0..1" />
+          <End Type="BDPropertyModel.Propiedad" Role="Propiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Barrio">
+              <PropertyRef Name="IDBarrio" />
+            </Principal>
+            <Dependent Role="Propiedad">
+              <PropertyRef Name="IDBarrio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propiedad_Edificio">
+          <End Type="BDPropertyModel.Edificio" Role="Edificio" Multiplicity="0..1" />
+          <End Type="BDPropertyModel.Propiedad" Role="Propiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Edificio">
+              <PropertyRef Name="IDEdificio" />
+            </Principal>
+            <Dependent Role="Propiedad">
+              <PropertyRef Name="IDEdificio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propiedad_Estado">
+          <End Type="BDPropertyModel.Estado" Role="Estado" Multiplicity="1" />
+          <End Type="BDPropertyModel.Propiedad" Role="Propiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado">
+              <PropertyRef Name="IDEstado" />
+            </Principal>
+            <Dependent Role="Propiedad">
+              <PropertyRef Name="IDEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propiedad_Propietario">
+          <End Type="BDPropertyModel.Propietario" Role="Propietario" Multiplicity="1" />
+          <End Type="BDPropertyModel.Propiedad" Role="Propiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propietario">
+              <PropertyRef Name="IDPropietario" />
+            </Principal>
+            <Dependent Role="Propiedad">
+              <PropertyRef Name="IDPropietario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Propiedad_Tipo">
+          <End Type="BDPropertyModel.Tipo" Role="Tipo" Multiplicity="1" />
+          <End Type="BDPropertyModel.Propiedad" Role="Propiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo">
+              <PropertyRef Name="IDTipo" />
+            </Principal>
+            <Dependent Role="Propiedad">
+              <PropertyRef Name="IDTipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alquiler_Garante">
+          <End Type="BDPropertyModel.Garante" Role="Garante" Multiplicity="1" />
+          <End Type="BDPropertyModel.Alquiler" Role="Alquiler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Garante">
+              <PropertyRef Name="IDGarante" />
+            </Principal>
+            <Dependent Role="Alquiler">
+              <PropertyRef Name="IDGarante1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alquiler_Garante1">
+          <End Type="BDPropertyModel.Garante" Role="Garante" Multiplicity="1" />
+          <End Type="BDPropertyModel.Alquiler" Role="Alquiler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Garante">
+              <PropertyRef Name="IDGarante" />
+            </Principal>
+            <Dependent Role="Alquiler">
+              <PropertyRef Name="IDGarante2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alquiler_Inquilino">
+          <End Type="BDPropertyModel.Inquilino" Role="Inquilino" Multiplicity="1" />
+          <End Type="BDPropertyModel.Alquiler" Role="Alquiler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inquilino">
+              <PropertyRef Name="IDInquilino" />
+            </Principal>
+            <Dependent Role="Alquiler">
+              <PropertyRef Name="IDInquilino" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BDPropertyModelStoreContainer" CdmEntityContainer="BDPropertyEntities">
+          <EntitySetMapping Name="Alquiler">
+            <EntityTypeMapping TypeName="BDPropertyModel.Alquiler">
+              <MappingFragment StoreEntitySet="Alquiler">
+                <ScalarProperty Name="FechaFinContrato" ColumnName="FechaFinContrato" />
+                <ScalarProperty Name="FechaInicioContrato" ColumnName="FechaInicioContrato" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IDGarante2" ColumnName="IDGarante2" />
+                <ScalarProperty Name="IDGarante1" ColumnName="IDGarante1" />
+                <ScalarProperty Name="MontoAlquiler" ColumnName="MontoAlquiler" />
+                <ScalarProperty Name="IDAlquiler" ColumnName="IDAlquiler" />
+                <ScalarProperty Name="IDPropiedad" ColumnName="IDPropiedad" />
+                <ScalarProperty Name="IDInquilino" ColumnName="IDInquilino" />
+                </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CuotaMensual">
+            <EntityTypeMapping TypeName="BDPropertyModel.CuotaMensual">
+              <MappingFragment StoreEntitySet="CuotaMensual">
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+                <ScalarProperty Name="MontoRecargo" ColumnName="MontoRecargo" />
+                <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+                <ScalarProperty Name="Pago" ColumnName="Pago" />
+                <ScalarProperty Name="Periodo" ColumnName="Periodo" />
+                <ScalarProperty Name="IDCuotaMensual" ColumnName="IDCuotaMensual" />
+                <ScalarProperty Name="IDAlquiler" ColumnName="IDAlquiler" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estado">
+            <EntityTypeMapping TypeName="BDPropertyModel.Estado">
+              <MappingFragment StoreEntitySet="Estado">
+                <ScalarProperty Name="IDEstado" ColumnName="IDEstado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Garante">
+            <EntityTypeMapping TypeName="BDPropertyModel.Garante">
+              <MappingFragment StoreEntitySet="Garante">
+                <ScalarProperty Name="IDLocalidad" ColumnName="IDLocalidad" />
+                <ScalarProperty Name="IDGarante" ColumnName="IDGarante" />
+                <ScalarProperty Name="NombreYApellido" ColumnName="NombreYApellido" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="FechaNac" ColumnName="FechaNac" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="MontoSueldo" ColumnName="MontoSueldo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inquilino">
+            <EntityTypeMapping TypeName="BDPropertyModel.Inquilino">
+              <MappingFragment StoreEntitySet="Inquilino">
+                <ScalarProperty Name="IDInquilino" ColumnName="IDInquilino" />
+                <ScalarProperty Name="IDLocalidad" ColumnName="IDLocalidad" />
+                <ScalarProperty Name="NombreYApellido" ColumnName="NombreYApellido" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="FechaNac" ColumnName="FechaNac" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Localidad">
+            <EntityTypeMapping TypeName="BDPropertyModel.Localidad">
+              <MappingFragment StoreEntitySet="Localidad">
+                <ScalarProperty Name="IDLocalidad" ColumnName="IDLocalidad" />
+                <ScalarProperty Name="IDProvincia" ColumnName="IDProvincia" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Propietario">
+            <EntityTypeMapping TypeName="BDPropertyModel.Propietario">
+              <MappingFragment StoreEntitySet="Propietario">
+                <ScalarProperty Name="IDPropietario" ColumnName="IDPropietario" />
+                <ScalarProperty Name="IDLocalidad" ColumnName="IDLocalidad" />
+                <ScalarProperty Name="NombreYApellido" ColumnName="NombreYApellido" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="FechaNac" ColumnName="FechaNac" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provincia">
+            <EntityTypeMapping TypeName="BDPropertyModel.Provincia">
+              <MappingFragment StoreEntitySet="Provincia">
+                <ScalarProperty Name="IDProvincia" ColumnName="IDProvincia" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo">
+            <EntityTypeMapping TypeName="BDPropertyModel.Tipo">
+              <MappingFragment StoreEntitySet="Tipo">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IDTipo" ColumnName="IDTipo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="BDPropertyModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Edificio">
+            <EntityTypeMapping TypeName="BDPropertyModel.Edificio">
+              <MappingFragment StoreEntitySet="Edificio">
+                <ScalarProperty Name="IDBarrio" ColumnName="IDBarrio" />
+                <ScalarProperty Name="IDLocalidad" ColumnName="IDLocalidad" />
+                <ScalarProperty Name="MontoExpensas" ColumnName="MontoExpensas" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDEdificio" ColumnName="IDEdificio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Barrio">
+            <EntityTypeMapping TypeName="BDPropertyModel.Barrio">
+              <MappingFragment StoreEntitySet="Barrio">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDLocalidad" ColumnName="IDLocalidad" />
+                <ScalarProperty Name="IDBarrio" ColumnName="IDBarrio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Propiedad">
+            <EntityTypeMapping TypeName="BDPropertyModel.Propiedad">
+              <MappingFragment StoreEntitySet="Propiedad">
+                <ScalarProperty Name="CantHabitac" ColumnName="CantHabitac" />
+                <ScalarProperty Name="PisoNro" ColumnName="PisoNro" />
+                <ScalarProperty Name="Asador" ColumnName="Asador" />
+                <ScalarProperty Name="Pileta" ColumnName="Pileta" />
+                <ScalarProperty Name="GasNatural" ColumnName="GasNatural" />
+                <ScalarProperty Name="VistaCalle" ColumnName="VistaCalle" />
+                <ScalarProperty Name="Comedor" ColumnName="Comedor" />
+                <ScalarProperty Name="Cocina" ColumnName="Cocina" />
+                <ScalarProperty Name="Garage" ColumnName="Garage" />
+                <ScalarProperty Name="Cochera" ColumnName="Cochera" />
+                <ScalarProperty Name="Patio" ColumnName="Patio" />
+                <ScalarProperty Name="CantBaños" ColumnName="CantBaños" />
+                <ScalarProperty Name="Tamaño" ColumnName="Tamaño" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="IDLocalidad" ColumnName="IDLocalidad" />
+                <ScalarProperty Name="IDEdificio" ColumnName="IDEdificio" />
+                <ScalarProperty Name="IDEstado" ColumnName="IDEstado" />
+                <ScalarProperty Name="IDTipo" ColumnName="IDTipo" />
+                <ScalarProperty Name="IDBarrio" ColumnName="IDBarrio" />
+                <ScalarProperty Name="IDPropietario" ColumnName="IDPropietario" />
+                <ScalarProperty Name="IDPropiedad" ColumnName="IDPropiedad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

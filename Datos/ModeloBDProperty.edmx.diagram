@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c966bdaf795c42d594afbf08777afec2" Name="Diagrama1" ZoomLevel="85">
+        <EntityTypeShape EntityType="BDPropertyModel.Alquiler" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPropertyModel.CuotaMensual" Width="1.5" PointX="7.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPropertyModel.Estado" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPropertyModel.Garante" Width="1.5" PointX="8" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPropertyModel.Inquilino" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPropertyModel.Localidad" Width="1.5" PointX="6" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPropertyModel.Propietario" Width="1.5" PointX="1.125" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPropertyModel.Provincia" Width="1.5" PointX="3.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPropertyModel.Tipo" Width="1.5" PointX="0.75" PointY="14.375" IsExpanded="true" />
+        <AssociationConnector Association="BDPropertyModel.FK_CuotaMensual_Alquiler" ManuallyRouted="false" />
+        <AssociationConnector Association="BDPropertyModel.FK_Inquilino_Localidad" ManuallyRouted="false" />
+        <AssociationConnector Association="BDPropertyModel.FK_Localidad_Provincia" ManuallyRouted="false" />
+        <AssociationConnector Association="BDPropertyModel.FK_Garante_Localidad" />
+        <AssociationConnector Association="BDPropertyModel.FK_Propietario_Localidad" />
+        <EntityTypeShape EntityType="BDPropertyModel.sysdiagrams" Width="1.5" PointX="9.8505882964705052" PointY="9.0019182306723291" />
+        <EntityTypeShape EntityType="BDPropertyModel.Edificio" Width="1.5" PointX="7.625" PointY="5.75" />
+        <EntityTypeShape EntityType="BDPropertyModel.Barrio" Width="1.5" PointX="10.14706947195673" PointY="4.3959684094395337" />
+        <AssociationConnector Association="BDPropertyModel.FK_Barrio_Localidad" />
+        <EntityTypeShape EntityType="BDPropertyModel.Propiedad" Width="1.5" PointX="3.375" PointY="12.75" />
+        <AssociationConnector Association="BDPropertyModel.FK_Alquiler_Propiedad" />
+        <AssociationConnector Association="BDPropertyModel.FK_Alquiler_Propiedad1" />
+        <AssociationConnector Association="BDPropertyModel.FK_Propiedad_Barrio" />
+        <AssociationConnector Association="BDPropertyModel.FK_Propiedad_Edificio" />
+        <AssociationConnector Association="BDPropertyModel.FK_Propiedad_Estado" />
+        <AssociationConnector Association="BDPropertyModel.FK_Propiedad_Propietario" />
+        <AssociationConnector Association="BDPropertyModel.FK_Propiedad_Tipo" />
+        <AssociationConnector Association="BDPropertyModel.FK_Alquiler_Garante" />
+        <AssociationConnector Association="BDPropertyModel.FK_Alquiler_Garante1" />
+        <AssociationConnector Association="BDPropertyModel.FK_Alquiler_Inquilino" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
